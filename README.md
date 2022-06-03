@@ -8,7 +8,8 @@ A program that acts as a search engine by connecting to the Amadeus API to find 
 ## Amadeus API set up
 1. Go to https://developers.amadeus.com/register and register for a free account.
 2. Once registered, go to My Self-Service Workspace>Create New App
-3. Copy and paste your API key and API secret into the relevant fields in the program 
+3. Copy and paste your API key and API secret into the relevant fields in the program
+4. Follow the instructions on the site to obtain your personal Token with you api key and api secret 
 > API_KEY = 
 > 
 > API_SECRET =
