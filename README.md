@@ -20,8 +20,8 @@ A program that acts as a search engine by connecting to the Amadeus API to find 
 4. The API doesn't currently return a link so book directly, so the necessary information is displayed by the program for the user to simply book the flight themselves.
 A successful flight search response will look something like:
 ```
-    The cheapest flight we found for your dates is £1268.86 with ETIHAD AIRWAYS.
-    Head over to their website to book! 
+The cheapest flight from LHR to SYD that we found for your dates is £1268.86 with ETIHAD AIRWAYS.
+Head over to their website to book! 
 ```
 ## Future improvements
 1. Implementing a hotel search for the duration of the trip.
