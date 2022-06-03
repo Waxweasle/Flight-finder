@@ -10,6 +10,7 @@ A program that acts as a search engine by connecting to the Amadeus API to find 
 2. Once registered, go to My Self-Service Workspace>Create New App
 3. Copy and paste your API key and API secret into the relevant fields in the program 
 > API_KEY = 
+> 
 > API_SECRET =
 
 ## How to
