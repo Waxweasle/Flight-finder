@@ -30,6 +30,7 @@ Head over to their website to book!
 > cityCode =
 > 
 (this is the city entered in the flight search by default but can be set to any city)
+
 2.Hotel ratings included in the searchh are 3 stars and above.
 3. Found hotels will be passed into the following request to retireve pricing
 4. The following parameters can be editied for individual use 
