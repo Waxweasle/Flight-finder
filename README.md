@@ -26,7 +26,7 @@ The cheapest flight from LHR to SYD that we found for your dates is £1268.86 wi
 Head over to their website to book! 
 ```
 ### Hotel search
-1. Hotels will be retrieved from the city entered in 
+1.Hotels will be retrieved from the city entered in 
 > cityCode =
 > 
 (this is the city entered in the flight search by default but can be set to any city)
