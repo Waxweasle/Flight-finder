@@ -53,4 +53,39 @@ msg = f"The cheapest flight from {originLocationCode} to {destinationLocationCod
       "Head over to their website to book! "
 print(msg)
 
+# ------------------------------------HOTEL BY LOCATION---------------------------------------#
+# HOTEL PARAMS
+cityCode = destinationLocationCode
+ratings = ["3,4,5"]
 
+
+# HOTEL SEARCH WITHIN 5KM OF DESTINATION
+hotel_info = requests.get(url="https://test.api.amadeus.com/v1/reference-data/locations/hotels/by-city",
+                          headers=search_headers, params=f"cityCode={cityCode}&ratings=[4,5]")
+
+hotel_list = hotel_info.json()['data']
+hotel_name = [(x['name']) for x in hotel_list]
+hotel_id_list = [(x['hotelId']) for x in hotel_list]
+
+# ------------------------------------HOTEL PRICES----------------------------------------------#
+
+# HOTEL PARAMETERS
+hotelIds = hotel_id_list
+adults = 2
+checkInDate = departureDate
+checkOutDate = returnDate
+priceRange = ""
+
+
+offer_info = requests.get(url="https://test.api.amadeus.com/v3/shopping/hotel-offers", headers=search_headers,
+                          params=f"hotelIds={hotelIds}&adults=2&checkInDate={departureDate}&checkOutDate={returnDate}")
+
+hotel_price_list = offer_info.json()['data']
+available_hotels = [(x['hotel']['name']) for x in hotel_price_list]
+hotel_prices = [(x['offers'][0]['price']['total']) for x in hotel_price_list]
+hotels = {available_hotels[x]: hotel_prices[x] for x in range(len(available_hotels))}
+
+available_hotels_msg = "Of the hotels in the area that match your search criteria, the following have availability\n"\
+                       "for your dates (prices in local currency):"
+print(available_hotels_msg)
+print('\n'.join("{}: {}".format(k, v) for k, v in hotels.items()))
