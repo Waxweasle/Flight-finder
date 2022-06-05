@@ -1,4 +1,4 @@
-# Flight-finder
+# Flight/ Hotel-finder
 A program that acts as a search engine by connecting to the Amadeus API to find the user flights and hotels that fit their desired search criteria.
 
 ## Prerequisites
@@ -26,7 +26,7 @@ The cheapest flight from LHR to SYD that we found for your dates is £1268.86 wi
 Head over to their website to book! 
 ```
 ### Hotel search
-1. find_hotels() will be retrieve to you the cheapest hotels that match your parameters 
+1. find_hotels() returns to you the cheapest hotels that match your parameters 
 2. `cityCode` takes the value of `destinationLocationCode` as default but can be changed to any city location code if the user only wishes to search for hotels.
 3. Hotel search parameter documentation can be found at (https://developers.amadeus.com/self-service/category/hotel/api-doc/hotel-search/api-reference)
 4. Hotel ratings included in the search are 3 stars and above.
