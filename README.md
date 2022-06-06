@@ -43,3 +43,5 @@ Hotel C: 1080.00
 ## Future improvements
 1. Enable bookings to be carried out directly from the program.
 2. Create a user interface for ease of use / user experience.
+3. Host the UI & application on a live website
+
